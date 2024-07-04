@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: blue;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: red;
+        padding: 1rem;
+
+    }
+
+    .navbar-brand {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .navbar-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar-item {
+        margin-left: 1rem;
+        color: black;
+    }
+
+    .navbar-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .navbar-link:hover {
+        background-color: #575757;
+    }
+
+    .navbar-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 4px 0;
+    }
+
+    /* Responsive */
+    /* @media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    
+    .navbar-item {
+        margin: 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+} */
+
+    header {
+        /* border: 1px solid red;
+        background-color:darkslateblue; */
+    }
+
+    h1 {
+        width: 30%;
+        /* border: 1px solid red; */
+        /* text-align: center; */
+        padding-left: 150px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    * {
+        /* background-color: #0C0404;
+        color: whitesmoke ; */
+        /* height: 700px; */
+    }
+
+    body {
+        height: 2700px;
+        /* background-color: #FBFBF9; */
+        /* background-color: rgb(148, 134, 219); */
+        background: linear-gradient(to right, #9b1ede, #c5a4e6);
+        width: 100%;
+    }
+
+    .navbar {
+        /* background-color: aqua; */
+        /* border: 2px solid red; */
+        position: absolute;
+        top: 7px;
+        left: 900px;
+        display: flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: darkmagenta;
+        padding: 1rem;
+        border-radius: 100px;
+        /* background-color: aqua; */
+
+    }
+
+    .navbar li {
+        float: left;
+        /* display: inline-block; */
+        font-size: 17px;
+        margin: 4px;
+        padding: 2px;
+        padding-left: 20px;
+        padding-right: 50px;
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        /* padding: 14px 12px;
+        margin: 10px; */
+    }
+
+    ul {
+        display: flex;
+        /* position: fixed; */
+    }
+
+    li {
+        /* background-color: rebeccapurple; */
+        margin: 23px;
+        padding: 20px;
+        list-style: none;
+        color: black;
+        /* border: 1px solid red; */
+
+    }
+
+    .navbar li a:hover {
+        color: rgb(123, 123, 231);
+        font-size: 1.1rem;
+    }
+
+    .aboutme {
+        /* border: 2px solid red; */
+        width: 42%;
+        position: relative;
+        right: -800px;
+        justify-content: center;
+    }
+
+    #abt {
+        justify-content: center;
+        font-size: larger;
+    }
+
+    p {
+        background: 2px solid red;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .qwe {
+        position: relative;
+        top: 130px;
+        right: -1000px;
+        /* height: 400px; */
+        width: 400px;
+    }
+
+    .content {
+        width: 40%;
+        margin: 100px;
+        margin-top: 150px;
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+    }
+
+    .spn {
+        color: aqua;
+    }
+
+    .purple {
+        color: aqua
+    }
+
+    .animator {
+        font-size: 1.8rem;
+        /* border: 2px solid red; */
+        position: absolute;
+        top: 190px;
+        left: 140px;
+    }
+
+    #anim {
+        color: darkblue;
+    }
+
+    .extra {
+        font-size: 2.3rem;
+        color: #09050f;
+
+    }
+
+    hr {
+        /* border 0;
+        height: 2px red;
+        position: absolute;
+        top: 200px; */
+    }
+
+    .asd {
+        position: absolute;
+        top: 600px;
+    }
+
+    .about-my-profile {
+        /* border: 2px solid red; */
+        width: 42%;
+        position: relative;
+        right: -738px;
+        top: -50px;
+        justify-content: center;
+        font-size: larger;
+    }
+
+    #abtmyp {
+        color: blue;
+    }
+
+    .myimage {
+        width: 200px;
+        height: 190px;
+        border: 2px solid red;
+        position: relative;
+        left: 90px;
+        top: -150px;
+    }
+
+    .left {
+        border: 2px solid red;
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    .right {
+        border: 2px solid blue;
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    .navbarr {
+        background-color: aquamarine;
+    }
+
+    /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1em;
+    color: white;
+} */
+
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .navbar-menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        color: #000;
+    }
+
+    .navbar-item {
+        margin-left: 1em;
+    }
+
+    .progress-container {
+        width: 100%;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+
+
+    .progress-bar {
+        width: 0;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        animation: progress-animation 2s forwards;
+    }
+
+    .box-1 {
+        border: 2px solid rgb(47, 1, 106);
+        width: 43%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 10px;
+        background: linear-gradient(to right, #8433f6, #cca5fb);
+        border-radius: 30px;
+        box-shadow: #cca5fb;
+    }
+
+    .box-2 {
+        border: 2px solid rgb(47, 1, 106);
+        width: 43%;
+        position: absolute;
+        right: 77px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 10px;
+        background: linear-gradient(to right, #8433f6, #cca5fb);
+        border-radius: 30px;
+        box-shadow: #cca5fb;
+    }
+
+    .progress-bar.blue {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    .progress-bar.green {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    .progress-bar.red {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    .progress-bar.orange {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+
+    @keyframes progress-animation {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: var(--progress-width);
+        }
+    }
+
+    .pbar {
+        /* border: 2px solid red; */
+        position: relative;
+        left: -750px;
+        top: -600px;
+    }
+
+    .add {
+        position: absolute;
+        left: -600px;
+        top: -250px;
+        font-size: 2.1rem;
+        color: #a81a1a;
+        background-color: #ebe7f1;
+        padding: 7px;
+        border-radius: 15px;
+        width: 60%;
+        text-align: center;
+
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        /* margin-right: -15px;
+        margin-left: -15px; */
+        padding: 50px;
+    }
+
+    .big-4 {
+        font-size: 42px;
+        margin: 0 auto;
+        transform: scaleX(1.2);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5 {
+        line-height: 1.5;
+        color: #854d4d;
+        font-weight: 400;
+    }
+
+    :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+    }
+
+    h1 {
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+    .follow-us-container {
+        background-color: gray;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .follow-us-container h2 {
+        margin-bottom: 20px;
+        color: #333;
+        /* position: relative; */
+        top: 400px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: gray;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        color: white;
+    }
+
+    .social-icon:hover {
+        background-color: grey;
+    }
+
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <h1>
+            <!-- My Portfolio -->
+        </h1>
+        <p></p>
+        <nav class="navbar">
+
+            <div class="navbar-toggle" id="js-navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu" id="js-menu">
+                <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="#abot" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="#hmm2" class="navbar-link">Education</a></li>
+                <li class="navbar-item"><a href="#hmm3" class="navbar-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="animator">
+        <h2 class="extra">Hey, My Name is <!-- --><span class="purple">Mayank Saxena</span></h2>
+        <h4 class="extra">and I am a <!-- --><span id="anim"></span><span class="typed-cursor typed-cursor--blink"
+                aria-hidden="true">|</span></h4>
+
+    </div>
+    <div class="e">
+        <img src="myimage.png.jpg" alt="" class="qwe">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- <hr> -->
+    <br>
+
+    <div class="aboutme" id="abot">
+        <h1>About Me</h1>
+        <p id="abt">I'm a motivated and detail-oriented undergraduate student, currently pursuing a Bachelor of
+            Technology (B.Tech) degree with a focus on Computer Science. Proficient in coding languages such as MySQL,
+            C, Java, and Python, I have built a strong foundation in software development and programming principles</p>
+    </div>
+    <!-- <div>
+                <img src="myimage.png.jpg" alt="" class="myimage">
+            </div> -->
+
+    <br><br><br>
+
+    <ol class="about-my-profile">
+        <li class="d-flex"><span id="abtmyp">Profile:</span> <span>Fullstack Web Development </span></li>
+        <li class="d-flex"><span id="abtmyp">Domain:</span> <span> Artificial Intelligence </span></li>
+        <li class="d-flex"><span id="abtmyp">Education:</span> <span>Bachelors in Technology</span></li>
+        <li class="d-flex"><span id="abtmyp">Language:</span> <span>English, Hindi</span></li>
+        <!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
+        <li class="d-flex"><span id="abtmyp">Other Skills:</span> <span> App Developement, PyCharm, BlueJ &amp; Data
+                Analytics</span></li>
+        <li class="d-flex"><span id="abtmyp">Interest:</span> <span>Chess, Reading Books, Gymnastics, &amp;
+                Sports</span></li>
+        <h5 class="add">SKILLS</h5>
+        <div class="pbar">
+            <div class="progress-container">
+                <div class="progress-bar blue" style="--progress-width: 89%;">SQL</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar green" style="--progress-width: 79%;">Machine Learning</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar red" style="--progress-width: 84%;">Python</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar orange" style="--progress-width: 92%;">JavaScript</div>
+            </div>
+        </div>
+
+    </ol>
+    <!-- <hr> -->
+    <div class="row" id="hmm2">
+        <h1 class="big-4">Education</h1>
+        <div class="underline"></div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="box-1">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">2022-2026</span>
+                <h2>Bachelor of Technology</h2>
+                <span class="position">SRM University</span>
+                <p class="mt-4">Grade: Not yet given.</p>
+            </div>
+        </div>
+
+        <div class="box-2">
+            <div class="resume-wrap ftco-animate">
+                <span class="date">2020-2022</span>
+                <h2>Junior College</h2>
+                <span class="position">Vishnu Bhagwan Public School</span>
+                <p class="mt-4">Grade: First class distinction.</p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <hr>
+    </div>
+    <div class="follow-us-container" id="hmm3">
+        <h2>Follow me on...</h2>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mayank-saxena-04644a2b4" target="_blank" class="social-icon"
+                style="background-color: #0077B5;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                    alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/mayank.saxena.714/" target="_blank" class="social-icon"
+                style="background-color: #E4405F;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.discord.com" class="social-icon" target="_blank" style="background-color: #7289DA;">
+                <img src="download.png" alt="Discord">
+            </a>
+            <a href="https://www.twitter.com" class="social-icon" target="_blank" style="background-color: #1DA1F2;">
+                <img src="pngtree-twitter-social-media-round-icon-png-image_6315985.png" alt="Twitter">
+            </a>
+        </div>
+    </div>
+    <hr>
+</body>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#anim', {
+        strings: ['Data Analyst.', 'Andriod Developer.', 'Web Developer.'],
+        typeSpeed: 50,
+    });
+</script>
+
+</html>
